@@ -3,7 +3,6 @@ body {
   padding: 0;
   font-size: 18px;
   height: 100%;
-  overflow-x: hidden;
 
 }
 
@@ -269,57 +268,35 @@ color: grey;
 }
 
 .testimonial {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 20px;
 }
+
 .testimonial h4 {
-  text-align: center;
+  margin: 0;
 }
 
-.emily {
-  width: 33%;
+.testimonial p {
+  margin-right: 20px;
 }
 
-.emily img {
+.testimonial img {
   border-radius: 100px;
-  transform: scale(0.6);
-  margin-left: 30%;
 }
-.emily p {
-  margin-left: -10%;
-  text-align: center;
-}
-
-.thomas {
-  width: 33%;
-}
-
-.thomas img {
-  border-radius: 100px;
-  transform: scale(0.6);
-  margin-left: 30%;
-
-}
-.thomas p {
-  margin-left: -10%;
-  text-align: center;
+.emily, .thomas, .jennie {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
 }
 
 
 
-.jennie {
-  width: 33%;
-}
 
-.jennie img {
-  border-radius: 100px;
-  transform: scale(0.6);
-  margin-left: 30%;
 
-}
-.jennie p {
-  margin-left: -10%;
-  text-align: center;
-}
+
+
 
 /*four - images */
 
@@ -413,8 +390,10 @@ footer {
 
 
 
-/* Hamburger on Small Screens */
+/* Hamburger Small Screens */
 @media only screen and (max-width: 600px) {
+
+
   /* Links container */
   .links {
     display: none; 
@@ -478,10 +457,8 @@ footer {
 /* Mobile */
   
   #last-images {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;  
-    margin-top: 0;  
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .last-image1, 
@@ -502,18 +479,88 @@ footer {
 }
 
 
-.cherry h3 {
-  margin-top: 80px;
-  font-size: 20px;
+  .contenitore-3 {
+    display: flex;
+    flex-direction: column; 
+    
+  }
+
+  .contenitore-3 div {
+    width: 100%; 
+    padding: 15px; 
+  }
+
+  h3, p {
+    margin-top: 150px;
+
+  }
+
+  h3 {
+    font-size: 34px; 
+  }
+
+  p {
+    font-size: 20px; 
+  }
+
+  .contenitore-2 {
+    display: flex;
+    flex-direction: column; 
+    
+
+  }
+   .contenitore-2 div {
+    width: 100%; 
+    padding: 15px; 
+  }
+
+  .contenitore-1 {
+    display: flex;
+    flex-direction: column; 
+  
+
+  }
+   .contenitore-1 div {
+    width: 100%; 
+    padding: 15px;
+     
+  }
+
+  .contenitore-1 h2 {
+    font-size: 50px;
+    
+  }
+
+  .contenitore-1 p, a {
+    font-size: 24px;
+  }
+
+  .contenitore-2 h2 {
+    font-size: 50px;
+    
+  }
+
+  .contenitore-2 p, a {
+    font-size: 20px;
+  }
+
+  .contenitore-3 h2 {
+    font-size: 50px;
+    
+  }
+
+  .contenitore-3 p, a {
+    font-size: 24px;
+  }
+
+
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
 }
 
-.orange h3 {
-  margin-top: 90px;
-  font-size: 20px;
 }
-
-}
-
 
 
 
